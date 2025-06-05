@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Endri\\source\\repos\\Scout\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\viewmodel\\playerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\viewmodel\\playerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\model\\scautdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\model\\scautdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|c:\\users\\endri\\source\\repos\\scout\\scout\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A97E5E0-D542-47A9-BEF6-A447A32FB338}|Scout\\Scout.csproj|solutionrelative:scout\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Scout\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\App.xaml.cs",
+              "RelativeToolTip": "Scout\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T07:17:43.238Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\ViewModel\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "Scout\\ViewModel\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\ViewModel\\BaseViewModel.cs",
+              "RelativeToolTip": "Scout\\ViewModel\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T07:17:11.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\ViewModel\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Scout\\ViewModel\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\ViewModel\\RelayCommand.cs",
+              "RelativeToolTip": "Scout\\ViewModel\\RelayCommand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T07:17:27.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\App.xaml",
+              "RelativeDocumentMoniker": "Scout\\App.xaml",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\App.xaml",
+              "RelativeToolTip": "Scout\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-05T07:17:39.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Scout\\View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Scout\\View\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:37:58.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Scout\\View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\View\\MainWindow.xaml",
+              "RelativeToolTip": "Scout\\View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-05T07:16:56.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\ViewModel\\PlayerViewModel.cs",
+              "RelativeDocumentMoniker": "Scout\\ViewModel\\PlayerViewModel.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\ViewModel\\PlayerViewModel.cs",
+              "RelativeToolTip": "Scout\\ViewModel\\PlayerViewModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAOgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T07:17:14.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ScautDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\Model\\ScautDbContext.cs",
+              "RelativeDocumentMoniker": "Scout\\Model\\ScautDbContext.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\Model\\ScautDbContext.cs",
+              "RelativeToolTip": "Scout\\Model\\ScautDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T16:22:10.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\Model\\Player.cs",
+              "RelativeDocumentMoniker": "Scout\\Model\\Player.cs",
+              "ToolTip": "C:\\Users\\Endri\\source\\repos\\Scout\\Scout\\Model\\Player.cs",
+              "RelativeToolTip": "Scout\\Model\\Player.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T07:16:23.629Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

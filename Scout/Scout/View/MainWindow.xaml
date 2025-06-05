@@ -1,0 +1,209 @@
+﻿<Window x:Class="Scout.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scout"
+        xmlns:vm="clr-namespace:Scout.ViewModel"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Scout" Height="650" Width="1200">
+
+    
+    <Window.Background>
+        <ImageBrush ImageSource="tlo.jpg" Stretch="UniformToFill" />
+    </Window.Background>
+    
+    <Window.DataContext>
+        <vm:PlayerViewModel />
+    </Window.DataContext>
+    
+
+    <Grid Margin="10">
+        <!-- półprzezroczysta nakładka pod czytelność napisów -->
+        <Rectangle Fill="#80000000"/>
+        
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- nagłówek -->
+            <TextBlock Grid.Row="0" Text="Scouting Manager" FontWeight="Bold" FontSize="20" 
+                       HorizontalAlignment="Center" Margin="0,0,0,10" Foreground="White" />
+
+            <!-- zawartość pod nagłówkiem -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- tabela zawodników -->
+                <DataGrid Grid.Column="0" ItemsSource="{Binding PlayersView}" 
+                          AutoGenerateColumns="False" CanUserAddRows="False"
+                          IsReadOnly="False" SelectionMode="Single"
+                          SelectedItem="{Binding SelectedPlayer, Mode=TwoWay}"  Margin="5,0,0,5">
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Potential}" Value="Wysoki">
+                                    <Setter Property="Background" Value="LightGreen"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Potential}" Value="Niski">
+                                    <Setter Property="Background" Value="#FFFFC0C0"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding PlayerId}" IsReadOnly="True" Width="Auto" />
+                        <DataGridTextColumn Header="Imię" Binding="{Binding Name}" Width="*" />
+                        <DataGridTextColumn Header="Nazwisko" Binding="{Binding Surname}" Width="*" />
+                        <DataGridTextColumn Header="Wiek" Binding="{Binding Age}" Width="Auto" />
+                        <DataGridTextColumn Header="Pozycja" Binding="{Binding Position}" Width="*" />
+                        <DataGridTextColumn Header="Klub" Binding="{Binding Club}" Width="*" />
+                        <DataGridTextColumn Header="Liga" Binding="{Binding League}" Width="*"/>
+                        <DataGridTextColumn Header="Potencjał" Binding="{Binding Potential}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- prawa kolumna: wyszukiwanie + formularz -->
+                <ScrollViewer Grid.Column="1" Margin="10,0,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel VerticalAlignment="Top">
+
+                        <!-- wyszukiwarka -->
+                        <TextBlock Text="Wyszukiwarka" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="0,0,0,10" Foreground="White" />
+
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Imię:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding SearchName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Nazwisko:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding SearchSurname, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Wiek:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding SearchAge, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Pozycja:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <ComboBox SelectedItem="{Binding SearchPosition, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" MinWidth="150" Margin="0,0,5,5">
+                                <ComboBox.ItemsSource>
+                                    <x:Array Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                        <sys:String>Bramkarz</sys:String>
+                                        <sys:String>Obrońca</sys:String>
+                                        <sys:String>Pomocnik</sys:String>
+                                        <sys:String>Napastnik</sys:String>
+                                    </x:Array>
+                                </ComboBox.ItemsSource>
+                            </ComboBox>
+
+                            <TextBlock Text="Klub:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding SearchClub, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Liga:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding SearchLeague, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Potencjał:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <ComboBox SelectedItem="{Binding SearchPotential, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="1" MinWidth="150" Margin="0,0,5,5">
+                                <ComboBox.ItemsSource>
+                                    <x:Array Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                        <sys:String>Niski</sys:String>
+                                        <sys:String>Średni</sys:String>
+                                        <sys:String>Wysoki</sys:String>
+                                    </x:Array>
+                                </ComboBox.ItemsSource>
+                            </ComboBox>
+                        </Grid>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                            <Button Content="Wyczyść filtry" Command="{Binding ClearAllFilters}" Padding="5,2" Width="110" />
+                        </StackPanel>
+
+                        <Separator Margin="0,10" />
+
+                        <!-- formularz dodawania/usuwania/edycji -->
+                        <TextBlock Text="Dodaj/Usuń/Edytuj" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="0,0,0,2" Foreground="White" />
+                        <TextBlock Text="(Po zmianie wartości komórki klknij 'Edytuj')" FontWeight="Bold" FontSize="11" TextAlignment="Center" Margin="0,0,0,10" Foreground="White" />
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Imię:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding NewPlayer.Name, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Nazwisko:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding NewPlayer.Surname, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Wiek:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding NewPlayer.Age, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Pozycja:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <ComboBox SelectedItem="{Binding NewPlayer.Position, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" MinWidth="150" Margin="0,0,5,5">
+                                <ComboBox.ItemsSource>
+                                    <x:Array Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                        <sys:String>Bramkarz</sys:String>
+                                        <sys:String>Obrońca</sys:String>
+                                        <sys:String>Pomocnik</sys:String>
+                                        <sys:String>Napastnik</sys:String>
+                                    </x:Array>
+                                </ComboBox.ItemsSource>
+                            </ComboBox>
+
+                            <TextBlock Text="Klub:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding NewPlayer.Club, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Liga:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,5" Foreground="White"/>
+                            <TextBox Text="{Binding NewPlayer.League, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" MinWidth="150" Margin="0,0,5,5"/>
+
+                            <TextBlock Text="Potencjał:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,0" Foreground="White"/>
+                            <ComboBox SelectedItem="{Binding NewPlayer.Potential, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="1" MinWidth="150" Margin="0,0,5,5">
+                                <ComboBox.ItemsSource>
+                                    <x:Array Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                        <sys:String>Niski</sys:String>
+                                        <sys:String>Średni</sys:String>
+                                        <sys:String>Wysoki</sys:String>
+                                    </x:Array>
+                                </ComboBox.ItemsSource>
+                            </ComboBox>
+                        </Grid>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                            <Button Content="Dodaj" Command="{Binding AddPlayer}" Width="70" Margin="0,0,5,0" />
+                            <Button Content="Usuń" Command="{Binding DeletePlayer}" Width="70" Margin="0,0,5,0" />
+                            <Button Content="Edytuj" Command="{Binding SaveEditedPlayer}" Width="70" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
